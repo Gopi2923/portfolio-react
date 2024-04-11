@@ -5,7 +5,7 @@ import logo from "../../assets/gopi1.png";
 const Navbar = () => {
   return (
     <div className="navbar">
-      <img src={logo} alt="" width={"150px"} height={"80px"}/>
+      <img src={logo} alt="" width={"150px"} height={"80px"} />
       <ul className="nav-menu">
         <li>Home</li>
         <li>About Me</li>
