@@ -4,6 +4,7 @@ import theme_pattern from '../../assets/theme_pattern.svg'
 import mail_icon from '../../assets/mail_icon.svg'
 import location_icon from '../../assets/location_icon.svg'
 import call_icon from '../../assets/call_icon.svg'
+// import linkedin from '../../assets/linkedin.svg'
 
 const Contact = () => {
 
@@ -51,6 +52,9 @@ const Contact = () => {
                 <div className="contact-detail">
                     <img src={location_icon} alt="" /> <p>Banglore</p>
                 </div>
+                {/* <div className="contact-detail">
+                    <img src={linkedin} alt="" /> 
+                </div> */}
             </div>
         </div>
 
