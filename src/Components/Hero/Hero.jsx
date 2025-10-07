@@ -1,27 +1,50 @@
 import React from "react";
 import "./Hero.css";
 import profile_img from "../../assets/Gopi,D.jpg";
-import AnchorLink from 'react-anchor-link-smooth-scroll'
-
+import AnchorLink from "react-anchor-link-smooth-scroll";
 
 const Hero = () => {
   return (
-    <div id="home" className="hero">
-      <img src={profile_img} alt="" />
-      <h1>
-        <span>I'm Gopi D,</span> frontend developer based in India.
-      </h1>
-      <p>
-        Results-Driven Frontend Developer with 2 Years of Experience | Expertise
-        in Crafting Responsive and User-Friendly Web Interfaces | Proficient in
-        HTML, CSS, JavaScript, React, Redux and Modern Frontend Frameworks |
-        Strong Problem-Solving Skills.
-      </p>
-      <div className="hero-action">
-        <div className="hero-connect"><AnchorLink className='anchor-link' offset={50} href='#contact'>Connect With Me</AnchorLink></div>
-        <a className="hero-resume" href="https://drive.google.com/file/d/1NsoY9k6ieTwxEzPfzXHiMDhSIi_BOfIQ/view?usp=drive_link" target="_blank">My resume</a>
+    <section id="home" className="hero">
+      <div className="hero-content">
+        <div className="hero-text">
+          <h1>
+            Hi, I'm <span className="highlight">Gopi D</span>
+            <br />
+            <span className="subtext">Frontend Developer</span> from India.
+          </h1>
+
+          <p className="hero-description">
+            A passionate <strong>Frontend Developer</strong> with 3.5 years of experience
+            crafting responsive, interactive, and user-focused web interfaces.
+            I specialize in <strong>React.js</strong>, <strong>Redux</strong>, and
+            modern frontend tools that bring designs to life.
+          </p>
+
+          <div className="hero-buttons">
+            <AnchorLink
+              className="btn primary-btn"
+              offset={50}
+              href="#contact"
+            >
+              Connect With Me
+            </AnchorLink>
+            <a
+              className="btn secondary-btn"
+              href="https://drive.google.com/file/d/1NsoY9k6ieTwxEzPfzXHiMDhSIi_BOfIQ/view?usp=drive_link"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              View Resume
+            </a>
+          </div>
+        </div>
+
+        <div className="hero-image">
+          <img src={profile_img} alt="Gopi D" />
+        </div>
       </div>
-    </div>
+    </section>
   );
 };
 
