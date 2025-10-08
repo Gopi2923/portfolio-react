@@ -1,69 +1,102 @@
 import React from "react";
 import "./About.css";
 import theme_pattern from "../../assets/theme_pattern.svg";
-import profile_img from "../../assets/about_profile.svg";
 
 const About = () => {
   return (
-    <div id="about" className="about">
+    <section id="about" className="about">
+      {/* Title */}
       <div className="about-title">
-        <h1>About me</h1>
-        <img src={theme_pattern} alt="" />
+        <h1>About Me</h1>
+        <img src={theme_pattern} alt="pattern" />
       </div>
+
+      {/* About Content */}
       <div className="about-sections">
-        <div className="about-left">
-          {/* <img src={profile_img} alt="" /> */}
+        <div className="about-left-text">
+          <h2 className="about-highlight">Who I Am</h2>
+          <p>
+            I’m a <strong>Frontend Developer</strong> with 3.5 years of hands-on
+            experience building responsive and dynamic web applications. I love
+            turning design ideas into interactive user experiences using{" "}
+            <strong>React.js</strong>, <strong>Redux</strong>,{" "}
+            <strong>JavaScript</strong>, and <strong>Next.js</strong>.
+          </p>
+          <p>
+            I’m passionate about writing clean, maintainable code and constantly
+            learning new technologies to improve both performance and design. I
+            believe that great products are built through a balance of
+            creativity, logic, and usability.
+          </p>
         </div>
+
+        {/* Skills */}
         <div className="about-right">
-          <div className="about-para">
-            <p>
-              I'm a skilled front-end developer with 2 years of experience,
-              proficient in creating visually appealing and responsive web
-              interfaces. Experienced in React, Redux HTML, CSS, and JavaScript,
-              with a keen eye for design and user experience.
-            </p>
-            <p>
-              Passionate about staying updated on industry trends and
-              implementing best practices in web development.
-            </p>
-          </div>
           <div className="about-skills">
             <div className="about-skill">
-              <p>HTML & CSS</p>
-              <hr style={{ width: "50%" }} />
-            </div>
-            <div className="about-skill">
-              <p>React JS</p>
-              <hr style={{ width: "70%" }} />
+              <p>React.js</p>
+              <div className="skill-bar">
+                <div className="skill-fill" style={{ width: "90%" }}></div>
+              </div>
             </div>
             <div className="about-skill">
               <p>JavaScript</p>
-              <hr style={{ width: "60%" }} />
+              <div className="skill-bar">
+                <div className="skill-fill" style={{ width: "80%" }}></div>
+              </div>
             </div>
+
             <div className="about-skill">
-              <p>Next JS</p>
-              <hr style={{ width: "50%" }} />
+              <p>HTML & CSS</p>
+              <div className="skill-bar">
+                <div className="skill-fill" style={{ width: "85%" }}></div>
+              </div>
             </div>
+
+            <div className="about-skill">
+              <p>Next.js</p>
+              <div className="skill-bar">
+                <div className="skill-fill" style={{ width: "50%" }}></div>
+              </div>
+            </div>
+            
+            <div className="about-skill">
+              <p>Tailwind CSS</p>
+              <div className="skill-bar">
+                <div className="skill-fill" style={{ width: "70%" }}></div>
+              </div>
+            </div>
+
+              <div className="about-skill">
+              <p>Git & Github </p>
+              <div className="skill-bar">
+                <div className="skill-fill" style={{ width: "75%" }}></div>
+              </div>
+            </div>
+            
+           
           </div>
         </div>
       </div>
+
+      {/* Achievements */}
       <div className="about-achievements">
         <div className="about-achievement">
-          <h1>2+</h1>
-          <p>YEARS OF EXPERIENCE</p>
+          <h1>3+</h1>
+          <p>Years of Experience</p>
         </div>
         <hr />
         <div className="about-achievement">
           <h1>10+</h1>
-          <p>PROJECTS COMPLETED</p>
+          <p>Projects Completed</p>
         </div>
         <hr />
         <div className="about-achievement">
           <h1>1+</h1>
-          <p>HAPPY CLIENTS</p>
+          <p>Happy Clients</p>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
