@@ -44,7 +44,7 @@ const Navbar = () => {
           className="nav-mob-close"
         />
 
-        {["home", "about", "services", "work", "contact"].map((item) => (
+        {["home", "about", "experience", "projects", "contact"].map((item) => (
           <li key={item}>
             <AnchorLink
               className="anchor-link"

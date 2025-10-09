@@ -21,7 +21,7 @@ const experiences = [
 
 const ExperienceTimeline = () => {
   return (
-    <div className='experience-timeline'>
+    <div id='experience' className='experience-timeline'>
       <div className='experience-title'>
         <h1>Experience</h1>
       </div>

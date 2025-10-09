@@ -2,11 +2,10 @@ import './MyWork.css'
 import theme_pattern from '../../assets/theme_pattern.svg'
 import mywork_data from '../../assets/mywork_data'
 import arrrow_icon from '../../assets/arrow_icon.svg'
-import ExperienceTimeline from '../ExperienceTimeline/ExperienceTimeline'
 
 const MyWork = () => {
   return (
-    <div id='work' className='mywork'>
+    <div id='projects' className='mywork'>
       <div className="mywork-title">
         <h1>Projects</h1>
         <img src={theme_pattern} alt="" />
@@ -20,7 +19,7 @@ const MyWork = () => {
         <p>Show More</p>
         <img src={arrrow_icon} alt="" />
       </div>
-      <ExperienceTimeline />
+   
     </div>
   )
 }
