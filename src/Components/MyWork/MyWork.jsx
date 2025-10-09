@@ -1,8 +1,8 @@
-import React from 'react'
 import './MyWork.css'
 import theme_pattern from '../../assets/theme_pattern.svg'
 import mywork_data from '../../assets/mywork_data'
 import arrrow_icon from '../../assets/arrow_icon.svg'
+import ExperienceTimeline from '../ExperienceTimeline/ExperienceTimeline'
 
 const MyWork = () => {
   return (
@@ -20,6 +20,7 @@ const MyWork = () => {
         <p>Show More</p>
         <img src={arrrow_icon} alt="" />
       </div>
+      <ExperienceTimeline />
     </div>
   )
 }
