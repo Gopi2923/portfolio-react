@@ -11,12 +11,19 @@
 }
 
 /* ✨ LOGO TEXT STYLING */
+.logo-wrap {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
 .logo-text {
   font-size: 28px;
   font-weight: 700;
   letter-spacing: 1px;
   cursor: pointer;
   background: linear-gradient(90deg, #da7c25, #b923e1);
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   transition: 0.3s ease;
@@ -28,6 +35,22 @@
 
 .logo-text:hover {
   transform: scale(1.05);
+}
+
+.js-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 22px;
+  min-width: 22px;
+  padding: 0 6px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  background: #f7df1e; /* JS yellow */
+  color: #000;
+  box-shadow: 0 2px 8px rgba(247, 223, 30, 0.25);
 }
 
 /* NAV MENU */

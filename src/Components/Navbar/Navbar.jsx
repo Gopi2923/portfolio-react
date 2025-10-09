@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import { useRef, useState } from "react";
 import "./Navbar.css";
 import AnchorLink from "react-anchor-link-smooth-scroll";
 import menu_open from "../../assets/menu_open.svg";
@@ -20,9 +20,13 @@ const Navbar = () => {
     <div className="navbar">
       {/* Text-based logo instead of image */}
       <div className="nav-logo">
-        <h2 className="logo-text">
-          <span>GOPI</span> D
-        </h2>
+        <div className="logo-wrap">
+        <span className="js-badge" aria-label="JavaScript">JS</span>
+
+          <h2 className="logo-text">
+            <span>GOPI</span> D
+          </h2>
+        </div>
       </div>
 
       <img
