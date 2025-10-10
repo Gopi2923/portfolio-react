@@ -1,3 +1,4 @@
+import { useEffect } from 'react'
 import './ExperienceTimeline.css'
 
 const experiences = [
@@ -36,6 +37,23 @@ const experiences = [
 ]
 
 const ExperienceTimeline = () => {
+  useEffect(() => {
+    const items = document.querySelectorAll('.timeline-content')
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('in-view')
+            observer.unobserve(entry.target)
+          }
+        })
+      },
+      { threshold: 0.2, rootMargin: '0px 0px -60px 0px' }
+    )
+    items.forEach((el) => observer.observe(el))
+    return () => observer.disconnect()
+  }, [])
+
   return (
     <div id='experience' className='experience-timeline'>
       <div className='experience-title'>

@@ -59,7 +59,10 @@
   border: 1px solid rgba(255, 255, 255, 0.12);
   max-width: 86%;
   opacity: 0;
-  transform: translateY(8px);
+  transform: translateY(12px);
+}
+
+.timeline-content.in-view {
   animation: fadeSlideIn 600ms ease forwards;
 }
 
