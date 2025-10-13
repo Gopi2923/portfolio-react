@@ -1,4 +1,3 @@
-import React from 'react'
 import './Contact.css'
 import theme_pattern from '../../assets/theme_pattern.svg'
 import mail_icon from '../../assets/mail_icon.svg'
@@ -10,6 +9,12 @@ const Contact = () => {
 
     const onSubmit = async (event) => {
         event.preventDefault();
+        const submitBtn = document.getElementById('contact-submit-btn')
+        const originalText = submitBtn ? submitBtn.textContent : ''
+        if (submitBtn) {
+          submitBtn.disabled = true
+          submitBtn.textContent = 'Sending...'
+        }
         const formData = new FormData(event.target);
     
         formData.append("access_key", "4d0619a4-1013-454a-ad61-adb7215503e9");
@@ -29,6 +34,10 @@ const Contact = () => {
         if (res.success) {
           alert(res.message);
         }
+        if (submitBtn) {
+          submitBtn.disabled = false
+          submitBtn.textContent = originalText
+        }
       };
 
       
@@ -38,16 +47,16 @@ const Contact = () => {
         <h1>Get in touch</h1>
         <img src={theme_pattern} alt="" />
       </div>
-      <div className="contact-section">
+        <div className="contact-section">
         <div className="contact-left">
-            <h1>Let's talk</h1>
-            <p>I'm Currently available to take on new projects, so feel free to send me a message about anything that you want me to work on. You can contact anytime</p>
+            <h1>Let&apos;s talk</h1>
+            <p>I&apos;m Currently available to take on new projects, so feel free to send me a message about anything that you want me to work on. You can contact anytime</p>
             <div className="contact-details">
                 <div className="contact-detail">
-                    <img src={mail_icon} alt="" /> <p>dgopidhikshan@gmail.com</p>
+                    <img src={mail_icon} alt="" /> <p><a className='contact-link' href="mailto:dgopidhikshan@gmail.com">dgopidhikshan@gmail.com</a></p>
                 </div>
                 <div className="contact-detail">
-                    <img src={call_icon} alt="" /> <p>8778801713</p>
+                    <img src={call_icon} alt="" /> <p><a className='contact-link' href="tel:+918778801713">+91 87788 01713</a></p>
                 </div>
                 <div className="contact-detail">
                     <img src={location_icon} alt="" /> <p>Banglore</p>
@@ -59,13 +68,13 @@ const Contact = () => {
         </div>
 
         <form onSubmit={onSubmit} className="contact-right">
-            <label htmlFor="">Your Name</label>
-            <input type="text"  placeholder='Enter your name' name='name'/>
-            <label htmlFor="">Your Email</label>
-            <input type="email" placeholder='Enter your email' name='email' />
-            <label htmlFor="">Write your message</label>
-            <textarea name="message" rows="8" placeholder='Enter your message'></textarea>
-            <button type='submit' className='contact-submit'>Submit Now</button>
+            <label htmlFor="name">Your Name</label>
+            <input id="name" type="text" autoComplete="name" placeholder='Enter your name' name='name'/>
+            <label htmlFor="email">Your Email</label>
+            <input id="email" type="email" autoComplete="email" placeholder='Enter your email' name='email' />
+            <label htmlFor="message">Write your message</label>
+            <textarea id="message" name="message" rows="8" placeholder='Enter your message'></textarea>
+            <button type='submit' className='contact-submit' id='contact-submit-btn'>Submit Now</button>
         </form>
       </div>
     </div>
