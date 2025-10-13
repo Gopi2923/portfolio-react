@@ -31,7 +31,7 @@ const Hero = () => {
             </AnchorLink>
             <a
               className="btn secondary-btn"
-              href="https://drive.google.com/file/d/1NsoY9k6ieTwxEzPfzXHiMDhSIi_BOfIQ/view?usp=drive_link"
+              href="https://drive.google.com/file/d/1JXP3bstC5k4o1mPiLp7XpOQfViiBJ9kW/view?usp=drive_link"
               target="_blank"
               rel="noopener noreferrer"
             >
