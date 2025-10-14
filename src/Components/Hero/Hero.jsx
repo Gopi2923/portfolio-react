@@ -76,7 +76,7 @@ const Hero = () => {
           <p className="hero-description reveal delay-1">
             A passionate <strong>Frontend Developer</strong> with 3.5 years of experience
             crafting responsive, interactive, and user-focused web interfaces.
-            I specialize in <strong>React.js</strong>, <strong>Redux</strong>, and
+            I specialize in <strong>JavaScript</strong>, <strong>React.js</strong>, <strong>Redux</strong>, <strong>Next.js</strong>, <strong>Tailwind CSS</strong> and
             modern frontend tools that bring designs to life.
           </p>
 
