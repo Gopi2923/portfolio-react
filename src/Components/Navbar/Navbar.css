@@ -95,6 +95,11 @@
 .anchor-link {
   text-decoration: none;
   color: white;
+  transition: color 0.3s ease;
+}
+
+.anchor-link.active {
+  color: #da7c25;
 }
 
 /* CONNECT BUTTON */

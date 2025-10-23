@@ -1,4 +1,4 @@
-import { useRef, useState } from "react";
+import { useRef, useState, useEffect } from "react";
 import "./Navbar.css";
 import AnchorLink from "react-anchor-link-smooth-scroll";
 import menu_open from "../../assets/menu_open.svg";
@@ -6,6 +6,7 @@ import menu_close from "../../assets/menu_close.svg";
 
 const Navbar = () => {
   const [menu, setMenu] = useState("home");
+  const [activeSection, setActiveSection] = useState("home");
   const menuRef = useRef();
 
   const openMenu = () => {
@@ -15,6 +16,29 @@ const Navbar = () => {
   const closeMenu = () => {
     menuRef.current.style.right = "-350px";
   };
+
+  useEffect(() => {
+    const sections = ["home", "about", "experience", "projects", "contact"];
+    
+    const handleScroll = () => {
+      const scrollPosition = window.scrollY + 100;
+      
+      for (const section of sections) {
+        const element = document.getElementById(section);
+        if (element) {
+          const { offsetTop, offsetHeight } = element;
+          if (scrollPosition >= offsetTop && scrollPosition < offsetTop + offsetHeight) {
+            setActiveSection(section);
+            setMenu(section);
+            break;
+          }
+        }
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
     <div className="navbar">
@@ -47,14 +71,14 @@ const Navbar = () => {
         {["home", "about", "experience", "projects", "contact"].map((item) => (
           <li key={item}>
             <AnchorLink
-              className="anchor-link"
+              className={`anchor-link ${activeSection === item ? 'active' : ''}`}
               offset={50}
               href={`#${item}`}
               onClick={() => setMenu(item)}
             >
               {item.charAt(0).toUpperCase() + item.slice(1)}
             </AnchorLink>
-            {menu === item && <div className="nav-underline"></div>}
+            {activeSection === item && <div className="nav-underline"></div>}
           </li>
         ))}
       </ul>

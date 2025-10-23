@@ -1,0 +1,183 @@
+.fab-container {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  z-index: 1000;
+}
+
+.fab-main {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #da7c25, #b923e1);
+  border: none;
+  color: white;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8px 25px rgba(218, 124, 37, 0.4);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.fab-main::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, #b923e1, #da7c25);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  border-radius: 50%;
+}
+
+.fab-main:hover::before {
+  opacity: 1;
+}
+
+.fab-main:hover {
+  transform: scale(1.1);
+  box-shadow: 0 12px 35px rgba(185, 35, 225, 0.5);
+}
+
+.fab-main.open {
+  transform: rotate(45deg);
+}
+
+.fab-icon {
+  position: relative;
+  z-index: 1;
+  transition: transform 0.3s ease;
+}
+
+.fab-icon.rotate {
+  transform: rotate(45deg);
+}
+
+.fab-menu {
+  position: absolute;
+  bottom: 70px;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(20px);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.fab-menu.open {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.fab-item {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.fab-item::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, #da7c25, #b923e1);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  border-radius: 50%;
+}
+
+.fab-item:hover::before {
+  opacity: 1;
+}
+
+.fab-item:hover {
+  transform: scale(1.1);
+  box-shadow: 0 8px 25px rgba(218, 124, 37, 0.3);
+}
+
+.fab-item svg {
+  position: relative;
+  z-index: 1;
+}
+
+.fab-item.email:hover {
+  box-shadow: 0 8px 25px rgba(234, 67, 53, 0.4);
+}
+
+.fab-item.github:hover {
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+}
+
+.fab-item.linkedin:hover {
+  box-shadow: 0 8px 25px rgba(0, 119, 181, 0.4);
+}
+
+.fab-item.phone:hover {
+  box-shadow: 0 8px 25px rgba(76, 175, 80, 0.4);
+}
+
+/* Animation delays for staggered effect */
+.fab-menu.open .fab-item:nth-child(1) {
+  animation: fabSlideIn 0.3s ease 0.1s both;
+}
+
+.fab-menu.open .fab-item:nth-child(2) {
+  animation: fabSlideIn 0.3s ease 0.2s both;
+}
+
+.fab-menu.open .fab-item:nth-child(3) {
+  animation: fabSlideIn 0.3s ease 0.3s both;
+}
+
+.fab-menu.open .fab-item:nth-child(4) {
+  animation: fabSlideIn 0.3s ease 0.4s both;
+}
+
+@keyframes fabSlideIn {
+  from {
+    opacity: 0;
+    transform: translateX(20px) scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+  }
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .fab-container {
+    bottom: 20px;
+    right: 20px;
+  }
+  
+  .fab-main {
+    width: 55px;
+    height: 55px;
+  }
+  
+  .fab-item {
+    width: 45px;
+    height: 45px;
+  }
+  
+  .fab-item svg {
+    width: 18px;
+    height: 18px;
+  }
+}
