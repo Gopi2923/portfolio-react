@@ -7,20 +7,23 @@ import Footer from "./Components/Footer/Footer";
 import ExperienceTimeline from "./Components/ExperienceTimeline/ExperienceTimeline";
 import FloatingActionButton from "./Components/FloatingActionButton/FloatingActionButton";
 import LoadingScreen from "./Components/LoadingScreen/LoadingScreen";
+import { ThemeProvider } from "./contexts/ThemeContext";
 
 const App = () => {
   return (
-    <div>
-      <LoadingScreen />
-      <Navbar />
-      <Hero />
-      <About />
-      <ExperienceTimeline />
-      <MyWork />
-      <Contact />
-      <Footer />
-      <FloatingActionButton />
-    </div>
+    <ThemeProvider>
+      <div>
+        <LoadingScreen />
+        <Navbar />
+        <Hero />
+        <About />
+        <ExperienceTimeline />
+        <MyWork />
+        <Contact />
+        <Footer />
+        <FloatingActionButton />
+      </div>
+    </ThemeProvider>
   );
 };
 

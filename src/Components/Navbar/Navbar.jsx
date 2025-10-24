@@ -3,9 +3,9 @@ import "./Navbar.css";
 import AnchorLink from "react-anchor-link-smooth-scroll";
 import menu_open from "../../assets/menu_open.svg";
 import menu_close from "../../assets/menu_close.svg";
+import ThemeToggle from "../ThemeToggle/ThemeToggle";
 
 const Navbar = () => {
-  const [menu, setMenu] = useState("home");
   const [activeSection, setActiveSection] = useState("home");
   const menuRef = useRef();
 
@@ -29,7 +29,6 @@ const Navbar = () => {
           const { offsetTop, offsetHeight } = element;
           if (scrollPosition >= offsetTop && scrollPosition < offsetTop + offsetHeight) {
             setActiveSection(section);
-            setMenu(section);
             break;
           }
         }
@@ -74,7 +73,6 @@ const Navbar = () => {
               className={`anchor-link ${activeSection === item ? 'active' : ''}`}
               offset={50}
               href={`#${item}`}
-              onClick={() => setMenu(item)}
             >
               {item.charAt(0).toUpperCase() + item.slice(1)}
             </AnchorLink>
@@ -83,10 +81,13 @@ const Navbar = () => {
         ))}
       </ul>
 
-      <div className="nav-connect">
-        <AnchorLink className="anchor-link" offset={50} href="#contact">
-          Connect With Me
-        </AnchorLink>
+      <div className="nav-actions">
+        <ThemeToggle />
+        <div className="nav-connect">
+          <AnchorLink className="anchor-link" offset={50} href="#contact">
+            Connect With Me
+          </AnchorLink>
+        </div>
       </div>
     </div>
   );
