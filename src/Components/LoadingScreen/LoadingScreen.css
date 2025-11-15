@@ -4,7 +4,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  background: linear-gradient(135deg, #000000, #0a0a0a, #1a1a1a);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -34,11 +34,11 @@
   letter-spacing: 2px;
 }
 
-.logo-g { color: #da7c25; animation: logoFloat 2s ease-in-out infinite 0s; }
-.logo-o { color: #b923e1; animation: logoFloat 2s ease-in-out infinite 0.2s; }
-.logo-p { color: #da7c25; animation: logoFloat 2s ease-in-out infinite 0.4s; }
-.logo-i { color: #b923e1; animation: logoFloat 2s ease-in-out infinite 0.6s; }
-.logo-d { color: #da7c25; animation: logoFloat 2s ease-in-out infinite 0.8s; }
+.logo-g { color: #9333ea; animation: logoFloat 2s ease-in-out infinite 0s; }
+.logo-o { color: #a855f7; animation: logoFloat 2s ease-in-out infinite 0.2s; }
+.logo-p { color: #9333ea; animation: logoFloat 2s ease-in-out infinite 0.4s; }
+.logo-i { color: #a855f7; animation: logoFloat 2s ease-in-out infinite 0.6s; }
+.logo-d { color: #9333ea; animation: logoFloat 2s ease-in-out infinite 0.8s; }
 
 @keyframes logoFloat {
   0%, 100% { transform: translateY(0); }
@@ -79,7 +79,7 @@
 
 .loading-subtitle {
   font-size: 16px;
-  color: #a0e7ff;
+  color: #c084fc;
   opacity: 0;
   animation: fadeInUp 0.8s ease 0.7s forwards;
 }
@@ -112,7 +112,7 @@
 
 .progress-fill {
   height: 100%;
-  background: linear-gradient(90deg, #da7c25, #b923e1);
+  background: linear-gradient(90deg, #9333ea, #a855f7);
   border-radius: 2px;
   transition: width 0.3s ease;
   position: relative;
@@ -151,7 +151,7 @@
   width: 8px;
   height: 8px;
   border-radius: 50%;
-  background: #da7c25;
+  background: #9333ea;
   animation: dotPulse 1.4s ease-in-out infinite both;
 }
 
@@ -179,7 +179,7 @@
 .bg-circle {
   position: absolute;
   border-radius: 50%;
-  background: radial-gradient(circle, rgba(218, 124, 37, 0.1), transparent 70%);
+  background: radial-gradient(circle, rgba(147, 51, 234, 0.1), transparent 70%);
   animation: bgFloat 8s ease-in-out infinite;
 }
 
@@ -196,7 +196,7 @@
   height: 200px;
   bottom: -100px;
   right: -100px;
-  background: radial-gradient(circle, rgba(185, 35, 225, 0.1), transparent 70%);
+  background: radial-gradient(circle, rgba(168, 85, 247, 0.1), transparent 70%);
   animation-delay: 2s;
 }
 
@@ -206,7 +206,7 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background: radial-gradient(circle, rgba(0, 198, 255, 0.1), transparent 70%);
+  background: radial-gradient(circle, rgba(147, 51, 234, 0.1), transparent 70%);
   animation-delay: 4s;
 }
 

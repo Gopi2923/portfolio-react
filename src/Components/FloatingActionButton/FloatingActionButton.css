@@ -9,14 +9,14 @@
   width: 60px;
   height: 60px;
   border-radius: 50%;
-  background: linear-gradient(135deg, #da7c25, #b923e1);
+  background: linear-gradient(135deg, #9333ea, #a855f7);
   border: none;
   color: white;
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 8px 25px rgba(218, 124, 37, 0.4);
+  box-shadow: 0 8px 25px rgba(147, 51, 234, 0.4);
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   position: relative;
   overflow: hidden;
@@ -26,7 +26,7 @@
   content: '';
   position: absolute;
   inset: 0;
-  background: linear-gradient(135deg, #b923e1, #da7c25);
+  background: linear-gradient(135deg, #a855f7, #9333ea);
   opacity: 0;
   transition: opacity 0.3s ease;
   border-radius: 50%;
@@ -38,7 +38,7 @@
 
 .fab-main:hover {
   transform: scale(1.1);
-  box-shadow: 0 12px 35px rgba(185, 35, 225, 0.5);
+  box-shadow: 0 12px 35px rgba(147, 51, 234, 0.5);
 }
 
 .fab-main.open {
@@ -95,7 +95,7 @@
   content: '';
   position: absolute;
   inset: 0;
-  background: linear-gradient(135deg, #da7c25, #b923e1);
+  background: linear-gradient(135deg, #9333ea, #a855f7);
   opacity: 0;
   transition: opacity 0.3s ease;
   border-radius: 50%;
@@ -107,7 +107,7 @@
 
 .fab-item:hover {
   transform: scale(1.1);
-  box-shadow: 0 8px 25px rgba(218, 124, 37, 0.3);
+  box-shadow: 0 8px 25px rgba(147, 51, 234, 0.3);
 }
 
 .fab-item svg {
