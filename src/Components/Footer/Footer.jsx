@@ -60,8 +60,9 @@ const Footer = () => {
               <ul>
                 <li>React.js</li>
                 <li>JavaScript</li>
+                <li>Redux</li>
+                <li>Next.js</li>
                 <li>Node.js</li>
-                <li>MongoDB</li>
                 <li>Tailwind CSS</li>
               </ul>
             </div>
@@ -69,8 +70,8 @@ const Footer = () => {
             <div className="footer-section">
               <h3>Contact Info</h3>
               <div className="contact-info">
-                <p>📍 India</p>
-                <p>📧 gopi@example.com</p>
+                <p>📍 India, Banglore</p>
+                <p>📧 dgopidhikshan@gmail.com</p>
                 <p>💼 Available for work</p>
               </div>
             </div>
