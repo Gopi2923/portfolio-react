@@ -84,3 +84,19 @@
         cursor: pointer;
     }
 }
+
+@media (max-width: 480px) {
+    .mywork {
+        margin: 40px 20px;
+        gap: 40px;
+    }
+
+    .mywork-title h1 {
+        font-size: 38px;
+    }
+
+    .mywork-container {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+}

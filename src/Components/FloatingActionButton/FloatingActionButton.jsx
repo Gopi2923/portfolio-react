@@ -32,7 +32,7 @@ const FloatingActionButton = () => {
           </svg>
         </a>
         <a 
-          href="linkedin.com/in/gopi-d-fsd" 
+          href="https://linkedin.com/in/gopi-d-fsd" 
           target="_blank" 
           rel="noopener noreferrer"
           className="fab-item linkedin"

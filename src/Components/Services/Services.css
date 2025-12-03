@@ -101,3 +101,19 @@
     gap: 30px;
   }
 }
+
+@media (max-width: 480px) {
+  .services {
+    margin: 40px 20px;
+    gap: 40px;
+  }
+
+  .services-title h1 {
+    font-size: 38px;
+  }
+
+  .services-container {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+}
