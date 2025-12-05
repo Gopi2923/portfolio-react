@@ -9,14 +9,14 @@
   width: 60px;
   height: 60px;
   border-radius: 50%;
-  background: linear-gradient(135deg, #9333ea, #a855f7);
+  background: var(--gradient-accent);
   border: none;
   color: white;
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 8px 25px rgba(147, 51, 234, 0.4);
+  box-shadow: 0 8px 25px var(--shadow);
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   position: relative;
   overflow: hidden;
@@ -26,7 +26,7 @@
   content: '';
   position: absolute;
   inset: 0;
-  background: linear-gradient(135deg, #a855f7, #9333ea);
+  background: var(--gradient-accent);
   opacity: 0;
   transition: opacity 0.3s ease;
   border-radius: 50%;
@@ -38,7 +38,7 @@
 
 .fab-main:hover {
   transform: scale(1.1);
-  box-shadow: 0 12px 35px rgba(147, 51, 234, 0.5);
+  box-shadow: 0 12px 35px var(--shadow);
 }
 
 .fab-main.open {
@@ -78,10 +78,10 @@
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  background: rgba(255, 255, 255, 0.1);
+  background: var(--bg-secondary);
   backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  color: white;
+  border: 1px solid var(--border-color);
+  color: var(--text-primary);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -95,7 +95,7 @@
   content: '';
   position: absolute;
   inset: 0;
-  background: linear-gradient(135deg, #9333ea, #a855f7);
+  background: var(--gradient-accent);
   opacity: 0;
   transition: opacity 0.3s ease;
   border-radius: 50%;
@@ -107,7 +107,8 @@
 
 .fab-item:hover {
   transform: scale(1.1);
-  box-shadow: 0 8px 25px rgba(147, 51, 234, 0.3);
+  box-shadow: 0 8px 25px var(--shadow);
+  color: white;
 }
 
 .fab-item svg {

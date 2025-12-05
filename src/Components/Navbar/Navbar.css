@@ -8,11 +8,12 @@
   top: 0;
   z-index: 10;
   backdrop-filter: blur(10px);
-  background: rgba(255, 255, 255, 0.1);
+  background: var(--bg-secondary);
   border-radius: 15px;
   padding: 10px 20px;
   border: 1px solid var(--border-color);
   transition: all 0.3s ease;
+  opacity: 0.95;
 }
 
 /* ✨ LOGO TEXT STYLING */

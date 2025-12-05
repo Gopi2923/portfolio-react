@@ -126,12 +126,12 @@
 
 .primary-btn {
   background: var(--gradient-accent);
-  color: #fff;
+  color: white;
 }
 
 .primary-btn:hover {
   transform: scale(1.05);
-  box-shadow: 0 0 15px rgba(147, 51, 234, 0.4);
+  box-shadow: 0 0 15px var(--shadow);
 }
 
 /* pulsing glow */
@@ -143,7 +143,7 @@
   position: absolute;
   inset: -6px;
   border-radius: 10px;
-  background: radial-gradient(closest-side, rgba(147, 51, 234, 0.35), transparent 70%);
+  background: radial-gradient(closest-side, var(--shadow), transparent 70%);
   filter: blur(6px);
   opacity: 0.6;
   animation: pulseGlow 2.2s ease-in-out infinite;
@@ -161,7 +161,7 @@
 
 .secondary-btn:hover {
   background: var(--accent-primary);
-  color: #fff;
+  color: white;
 }
 
 .hero-image {
@@ -175,7 +175,7 @@
   height: 260px;
   border-radius: 50%;
   object-fit: cover;
-  box-shadow: 0 0 20px rgba(147, 51, 234, 0.4);
+  box-shadow: 0 0 20px var(--shadow);
   border: 3px solid var(--border-color);
 }
 
