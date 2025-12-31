@@ -13,6 +13,9 @@ const App = () => {
   return (
     <ThemeProvider>
       <div>
+        <a href="#home" className="skip-to-content" aria-label="Skip to main content">
+          Skip to Content
+        </a>
         <LoadingScreen />
         <Navbar />
         <Hero />

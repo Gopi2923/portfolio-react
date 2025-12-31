@@ -39,6 +39,27 @@
   box-sizing: border-box;
 }
 
+/* Skip to content link for accessibility */
+.skip-to-content {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: var(--accent-primary);
+  color: white;
+  padding: 8px 16px;
+  text-decoration: none;
+  z-index: 10000;
+  border-radius: 0 0 4px 0;
+  font-weight: 600;
+  transition: top 0.3s;
+}
+
+.skip-to-content:focus {
+  top: 0;
+  outline: 2px solid var(--accent-secondary);
+  outline-offset: 2px;
+}
+
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 80px;

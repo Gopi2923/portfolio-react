@@ -11,32 +11,57 @@ const Contact = () => {
         event.preventDefault();
         const submitBtn = document.getElementById('contact-submit-btn')
         const originalText = submitBtn ? submitBtn.textContent : ''
+        const form = event.target;
+        
+        // Basic validation
+        const name = form.name.value.trim();
+        const email = form.email.value.trim();
+        const message = form.message.value.trim();
+        
+        if (!name || !email || !message) {
+          alert('Please fill in all fields.');
+          return;
+        }
+        
+        if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+          alert('Please enter a valid email address.');
+          return;
+        }
+        
         if (submitBtn) {
           submitBtn.disabled = true
           submitBtn.textContent = 'Sending...'
         }
-        const formData = new FormData(event.target);
-    
+        
+        const formData = new FormData(form);
         formData.append("access_key", "4d0619a4-1013-454a-ad61-adb7215503e9");
     
         const object = Object.fromEntries(formData);
         const json = JSON.stringify(object);
     
-        const res = await fetch("https://api.web3forms.com/submit", {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-            Accept: "application/json"
-          },
-          body: json
-        }).then((res) => res.json());
-    
-        if (res.success) {
-          alert(res.message);
-        }
-        if (submitBtn) {
-          submitBtn.disabled = false
-          submitBtn.textContent = originalText
+        try {
+          const res = await fetch("https://api.web3forms.com/submit", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+              Accept: "application/json"
+            },
+            body: json
+          }).then((res) => res.json());
+      
+          if (res.success) {
+            alert('Message sent successfully! I\'ll get back to you soon.');
+            form.reset();
+          } else {
+            alert('Failed to send message. Please try again later.');
+          }
+        } catch (error) {
+          alert('An error occurred. Please try again later.');
+        } finally {
+          if (submitBtn) {
+            submitBtn.disabled = false
+            submitBtn.textContent = originalText
+          }
         }
       };
 
